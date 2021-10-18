@@ -1,9 +1,9 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import Chart from 'react-apexcharts'
-import { SaleSuccess } from 'types/sale'
-import { round } from 'utils/format'
-import { BASE_URL } from 'utils/requests'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Chart from 'react-apexcharts';
+import { SaleSuccess } from 'types/sale';
+import { round } from 'utils/format';
+import { BASE_URL } from 'utils/requests';
 
 type SeriesData = {
     name: string;
@@ -12,13 +12,12 @@ type SeriesData = {
 
 type ChartData = {
     labels: {
-        categories: string[]; 
+        categories: string[];
     };
     series: SeriesData[];
 }
 
-const BarChart = () => {
-
+function BarChart() {
     const [chartData, setChartData] = useState<ChartData>({
         labels: {
             categories: []
@@ -26,7 +25,7 @@ const BarChart = () => {
         series: [
             {
                 name: "",
-                data: []                   
+                data: []
             }
         ]
     });
@@ -45,13 +44,13 @@ const BarChart = () => {
                     series: [
                         {
                             name: "% Success",
-                            data: mySeries                   
+                            data: mySeries
                         }
                     ]
                 });
             });
-    }, []);
-    
+    }, [])
+
     const options = {
         plotOptions: {
             bar: {
@@ -59,10 +58,10 @@ const BarChart = () => {
             }
         },
     };
-        
+
     return (
-        <Chart 
-            options={{ ...options, xaxis: chartData.labels}}
+        <Chart
+            options={{ ...options, xaxis: chartData.labels }}
             series={chartData.series}
             type="bar"
             height="240"

@@ -2,7 +2,7 @@ import { Seller } from "./seller"
 
 export type Sale = {
     id: number;
-    visited: number,
+    visited: number;
     deals: number;
     amount: number;
     date: string;
@@ -18,7 +18,7 @@ export type SalePage = {
     number: number;
     first: boolean;
     numberOfElements?: number;
-    empty?: boolean;
+    empty?: boolean
 }
 
 export type SaleSum = {
