@@ -1,8 +1,8 @@
-INSERT INTO tb_sellers(name) VALUES ('Ana');
+INSERT INTO tb_sellers(name) VALUES ('Cássia');
 INSERT INTO tb_sellers(name) VALUES ('Sadraque ');
 INSERT INTO tb_sellers(name) VALUES ('Bernardo');
 INSERT INTO tb_sellers(name) VALUES ('Arthur');
-INSERT INTO tb_sellers(name) VALUES ('Cássia');
+INSERT INTO tb_sellers(name) VALUES ('Ana');
 
 INSERT INTO tb_sales(seller_id,visited,deals,amount,date) VALUES (5,83,66,5501.0,'2021-04-01');
 INSERT INTO tb_sales(seller_id,visited,deals,amount,date) VALUES (5,113,78,8290.0,'2021-03-31');
